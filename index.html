@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página con Buscador</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="title-cam">
+        <h1>Escenarios del cine en la <span>CDMX</span></h1>
+        <img src="assets/picture/cam2.png" alt="" />
+      </div>
+
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar..." />
+        <button onclick="buscar()">🔍</button>
+      </div>
+      <nav class="main-nav">
+        <a href="#">INICIO</a>
+
+        <div class="list-down">
+          <button class="listbtn">PELICULAS ⌄</button>
+          <div class="list-down-content">
+            <a href="#" data-category="todas">Amores perros</a>
+            <a href="#" data-category="drama">El ángel exterminador</a>
+            <a href="#" data-category="comedia">Godzilla</a>
+            <a href="#" data-category="romance">Licencia para matar</a>
+            <a href="#" data-category="accion">Roma</a>
+            <a href="#" data-category="terror">Romeo + Julieta</a>
+            <a href="#" data-category="clasicos">Spectre</a>
+            <a href="#" data-category="internacional">Vengador del futuro</a>
+          </div>
+        </div>
+      </nav>
+
+      <di class="icono-redes">
+        <a href="#"
+          ><img src="assets/picture/instagram.png" alt="instagram"
+        /></a>
+        <a href="#"><img src="assets/picture/facebook.png" alt="facebook" /></a>
+        <a href="#"><img src="assets/picture/x.png" alt="x" /></a>
+      </di>
+    </header>
+    <div class="separador"></div>
+    <!--     <div class="cinta">
+        <img src="assets/picture/cinta.png" alt="cinta de película">
+    </div> -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="assets/picture/amores-perros.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/picture/angel-exterminador.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/picture/godzilla.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/picture/licencia-matar.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/picture/roma.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/picture/romeo-julieta.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/picture/spectre.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!--     <div class="cinta">
+        <img src="assets/picture/cinta.png" alt="cinta de película">
+    </div> -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 1,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+    <section class="mapa-section">
+      <div class="textMap">
+        <p>
+          La Ciudad de México ha sido escenario de muchas películas nacionales e
+          internacionales. Te invitamos a explorar algunos de los lugares que
+          han sido escenarios del cine.
+        </p>
+        <img src="assets/picture/cam2.png" alt="" />
+      </div>
+      <div class="mapa-container">
+        <img src="assets/picture/mapa.png" alt="Mapa CDMX" class="mapa" />
+
+        <div class="pin" style="top: 30%; left: 40%" data-lugar="zona1"></div>
+        <div class="pin" style="top: 35%; left: 50%" data-lugar="zona2"></div>
+        <div class="pin" style="top: 45%; left: 60%" data-lugar="zona3"></div>
+      </div>
+    </section>
+
+    <div class="swiper mySwiper2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="assets/picture/amores-perros.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/picture/angel-exterminador.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/picture/godzilla.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/picture/licencia-matar.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/picture/roma.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/picture/romeo-julieta.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/picture/spectre.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <script>
+      var swiper = new Swiper(".mySwiper2", {
+        slidesPerView: 3,
+        spaceBetween: 1,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+
+    <section
+      id="detalle-pelicula"
+      class="detalle-pelicula"
+      style="display: none"
+    >
+      <!-- Contenedor de player trailer -->
+      <div class="contenido"></div>
+      <button id="home">Volver al contenido</button>
+    </section>
+
+<script src="assets/js/main.js"></script>
+    <footer>
+      <div class="cam-inf">
+        <img src="assets/picture/cam2.png" alt="" />
+        <h1>ESCENARIOS DEL CINE EN LA CDMX</h1>
+      </div>
+    </footer>
+
+  </body>
+</html>
